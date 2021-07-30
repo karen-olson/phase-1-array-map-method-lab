@@ -13,32 +13,20 @@ const tutorials = [
 
 function wordIterator(sentence) {
   const arrayOfWords = sentence.split(" ");
-  //console.log(arrayOfWords);
 
   const capitalizedWords = arrayOfWords.map(capitalize);
-  //console.log(capitalizedWords);
 
   const stringOfCapitalizedWords = capitalizedWords.join(" ");
-  //console.log(stringOfCapitalizedWords);
 
   return stringOfCapitalizedWords;
 }
 
 function capitalize(word) {
-  // Copy the word so the function is nondestructive.
-  //console.log(word);
   const newWord = word.slice();
 
-  // Modify the first letter of the new word, setting it to uppercase. Return the new word.
   const capitalizedWord = newWord.replace(newWord[0], newWord[0].toUpperCase());
   return capitalizedWord;
 }
-
-/*
-function titleCased() {
-  return tutorials.map(wordIterator);
-}
-*/
 
 const titleCased = () => {
   return tutorials.map(wordIterator);
